@@ -20,6 +20,6 @@ Este fue realizado en node.js como gestor de base de datos postgresSQL13
   . Se debe configurar la conexion de la abse de datos asi node.js este archivo se encuentra en la carpeta config/config.js donde encontrara los datos necesarios 
     para la configuracion dependiendo de las credenciales que se tenga en postgres asi:
     
-    ![imagen](https://user-images.githubusercontent.com/30697632/114923163-1848c200-9df2-11eb-8a50-b51e976e7131.png)
+   ![imagen](https://user-images.githubusercontent.com/30697632/114923163-1848c200-9df2-11eb-8a50-b51e976e7131.png)
 
 
