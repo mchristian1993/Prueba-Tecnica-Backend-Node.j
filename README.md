@@ -21,5 +21,14 @@ Este fue realizado en node.js como gestor de base de datos postgresSQL13
     para la configuracion dependiendo de las credenciales que se tenga en postgres asi:
     
    ![imagen](https://user-images.githubusercontent.com/30697632/114923163-1848c200-9df2-11eb-8a50-b51e976e7131.png)
+   
+ ## configuraciones del servidor
+ 
+  . Para la configuracion en necesario que primeramente verifique en el cmd mediante el comando ipconfig cual es su direccion ip la cual debera colocar en el archivo             server.js en la linea 55 de esta manera:
+  
+  ![imagen](https://user-images.githubusercontent.com/30697632/114923467-7d9cb300-9df2-11eb-8c81-094350408227.png)
+  
+  Por defecto el puerto utilizado es el 3000
+
 
 
