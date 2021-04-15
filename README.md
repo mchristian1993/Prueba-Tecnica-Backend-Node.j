@@ -35,7 +35,7 @@ Este fue realizado en node.js como gestor de base de datos postgresSQL13
 
   . En la carpeta collecion API se encutnra un archivo llamado productsApi.postman_collection.json el cual contiene los Endpoint solicitados en esta prueba verificar la direccion ip antes de ejecutar cada uno de ellos
 
-# PROCUCCION
+# PRODUCCION
 
   . El proyecto fue subido a heroku para su produccion lleba como url  https://desarrollo-api.herokuapp.com/
   podra probar los diferentes Endpoint ejemplo:
