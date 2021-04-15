@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "0ed48897-00a3-4de0-b502-f551f11b411b",
+		"name": "productsApi",
+		"description": "Api para prueba de desarrollo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryID\": 1,\n    \"discontinued\": true,\n    \"productName\": \"Chef Anton'ng\",\n    \"quantityPerUnit\": \"48 - 6 oz jars\",\n    \"reorderLevel\": 0,\n    \"supplierID\": 1,\n    \"unitPrice\": 22,\n    \"unitsInStock\": 53,\n    \"unitsOnOrder\": 0\n}"
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/product",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product"
+					]
+				},
+				"description": "Permite crear un nuevo producto con su categoría y proveedor"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar producto por nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/product/search?nombre=c",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "c"
+						}
+					]
+				},
+				"description": "Permite realizar una búsqueda por nombre de producto o categoría o proveedor (requiere amenos un filtro)"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar producto por id de producto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryID\": 1,\n    \"discontinued\": true,\n    \"productName\": \"Cajun Sg\",\n    \"quantityPerUnit\": \"48 - 6 oz jars\",\n    \"reorderLevel\": 0,\n    \"supplierID\": 1,\n    \"unitPrice\": 22,\n    \"unitsInStock\": 53,\n    \"unitsOnOrder\": 0\n}"
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/product/9",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"9"
+					]
+				},
+				"description": "Obtiene la información un producto con su categoría y proveedor"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar prodcuto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryID\": 1,\n    \"discontinued\": true,\n    \"productName\": \"upda\",\n    \"quantityPerUnit\": \"48 - 6 oz jars\",\n    \"reorderLevel\": 0,\n    \"supplierID\": 1,\n    \"unitPrice\": 22,\n    \"unitsInStock\": 53,\n    \"unitsOnOrder\": 0\n}"
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/product/9",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"9"
+					]
+				},
+				"description": "Permite actualizar los datos de un producto"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener informacion de una categoria con sus productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTc3MzQ3OTR9.qAGJttHHj8ID_3NnZn4JoJz5pLVhUweKWs5NSDxKXcg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryID\": 1,\n    \"discontinued\": true,\n    \"productName\": \"Cajun Sg\",\n    \"quantityPerUnit\": \"48 - 6 oz jars\",\n    \"reorderLevel\": 0,\n    \"supplierID\": 1,\n    \"unitPrice\": 22,\n    \"unitsInStock\": 53,\n    \"unitsOnOrder\": 0\n}"
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/category/1/products?page=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Obtiene la información de una categoría, con sus productos asociados\r\n\r\nexample\r\n http://192.168.0.22:3000/api/category/1/products?page=1&pageSize=10 "
+			},
+			"response": []
+		},
+		{
+			"name": "Obtiene la información de un proveedor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryID\": 1,\n    \"discontinued\": true,\n    \"productName\": \"Cajun Sg\",\n    \"quantityPerUnit\": \"48 - 6 oz jars\",\n    \"reorderLevel\": 0,\n    \"supplierID\": 1,\n    \"unitPrice\": 22,\n    \"unitsInStock\": 53,\n    \"unitsOnOrder\": 0\n}"
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/suppliers/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"suppliers",
+						"1"
+					]
+				},
+				"description": "Obtiene la información de un proveedor"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtiene la información de un proveedor con sus productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryID\": 1,\n    \"discontinued\": true,\n    \"productName\": \"Cajun Sg\",\n    \"quantityPerUnit\": \"48 - 6 oz jars\",\n    \"reorderLevel\": 0,\n    \"supplierID\": 1,\n    \"unitPrice\": 22,\n    \"unitsInStock\": 53,\n    \"unitsOnOrder\": 0\n}"
+				},
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/suppliers/1/products",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"suppliers",
+						"1",
+						"products"
+					]
+				},
+				"description": "Obtiene la información de un proveedor con sus productos"
+			},
+			"response": []
+		},
+		{
+			"name": "Permite eliminar un proveedor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.22:3000/api/suppliers/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"22"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"suppliers",
+						"1"
+					]
+				},
+				"description": "Permite eliminar un proveedor"
+			},
+			"response": []
+		}
+	]
+}
