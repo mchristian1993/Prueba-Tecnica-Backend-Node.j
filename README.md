@@ -9,3 +9,7 @@ Este fue realizado en node.js como gestor de base de datos postgresSQL13
 
 . Inicialmente se debe ejecutar el comando npm install paa obtener todas las dependencias necesarias
 
+## configuraciones
+
+  . configuracion  de la conexion 
+
