@@ -29,6 +29,20 @@ Este fue realizado en node.js como gestor de base de datos postgresSQL13
   ![imagen](https://user-images.githubusercontent.com/30697632/114923467-7d9cb300-9df2-11eb-8c81-094350408227.png)
   
   Por defecto el puerto utilizado es el 3000
+  . por utlimo para correr el servidor ehecutar el comando node server.js
+  
+# POSTMAN
 
+  . En la carpeta collecion API se encutnra un archivo llamado productsApi.postman_collection.json el cual contiene los Endpoint solicitados en esta prueba verificar la direccion ip antes de ejecutar cada uno de ellos
+
+# PROCUCCION
+
+  . El proyecto fue subido a heroku para su produccion lleba como url  https://desarrollo-api.herokuapp.com/
+  podra probar los diferentes Endpoint ejemplo:
+  
+  https://desarrollo-api.herokuapp.com/api/product/search?nombre=c
+
+
+![imagen](https://user-images.githubusercontent.com/30697632/114924991-27307400-9df4-11eb-96ad-6fbedff8a7d8.png)
 
 
